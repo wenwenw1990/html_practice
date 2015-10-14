@@ -1,0 +1,35 @@
+<! DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<style>
+#myform {
+    padding-top: 30px;
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+    <p id = "demo">
+    </p>
+    
+    <form id = "myform">
+        Enter URL for Company List XML File<br>
+        <input type = "text" id = "xmlName" value = "XML file name"><br>
+        <button type="button" id = "mybutton" name = "submit" onclick = "getText()">Submit Query</button>
+            
+    </form>
+    <script type =  "text/javascript">
+        function getText() {
+            var  xmlName = document.getElementById("xmlName").value;
+            if (xmlName.search("xml") == -1) {
+                window.open("http://cs-server.usc.edu:45678/hw/hw4/invalid.xml");
+            }  else {
+                window.open("html_parser.html");
+            }
+        }
+    </script>
+    </body>
+</html>
